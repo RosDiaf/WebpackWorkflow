@@ -17,8 +17,21 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(jpg|png|gif|jpeg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/',
+                            useRelativePath: true
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -36,7 +49,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-            filename: 'bundle.css'
+            filename: 'styles/[name].css'
         })
     ]
 }
