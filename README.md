@@ -51,32 +51,42 @@ https://github.com/webpack/webpack-dev-server
 ## Install css loader:
 `
 https://github.com/webpack-contrib/css-loader
+`
+
+`
 npm i style-lader css-loader
 `
 
 ## Install sass loader
 `
 https://github.com/webpack-contrib/sass-loader
-npm i sass-loader node-sass
 `
 
-## Install min css extract plugin
 `
+npm i sass-loader node-sass
+`
+## Install min css extract plugin
 This plugin extracts CSS into separate files.
 https://github.com/webpack-contrib/mini-css-extract-plugin
+
+`
 npm i mini-css-extract-plugin
 `
 
 ## Install file-loader
-`
+
 This plugin is needed to bundle images
 https://github.com/webpack-contrib/file-loader
+
+`
 npm i file-loader
 `
 
 ## Install rimraf packages
-`
+
 This plugin is used to drop folder when creating new ones
 https://github.com/isaacs/rimraf
+
+`
 npm i rimraf
 `
