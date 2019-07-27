@@ -22,6 +22,9 @@ npm webpack -d (for development)
 ## If webpack.confing is into folder then run:
 `
 npx webpack --config webpack/webpack.config.js -p
+`
+
+`
 npx webpack --config webpack/webpack.config.js -d
 `
 
@@ -40,9 +43,9 @@ npm i mini-css-extract-plugin
 ## Install server:
 `
 https://github.com/webpack/webpack-dev-server
-npm i webpack-dev-server
-"start:dev": "webpack-dev-server"
-npm run start:dev
+* npm i webpack-dev-server
+* "start:dev": "webpack-dev-server"
+* npm run start:dev
 `
 
 ## Install css loader:
