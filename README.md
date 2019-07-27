@@ -13,8 +13,8 @@ npx webpack src/app.js -o build/output.js
 
 ## With webpack.config
 `
-npm webpack -p (for production)
-npm webpack -d (for development)
+### npm webpack -p (for production)
+### npm webpack -d (for development)
 `
 
 ## If webpack.confing is into folder then run:
