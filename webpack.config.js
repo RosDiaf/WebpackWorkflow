@@ -4,11 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/app.js',
-    output: {
-        path: __dirname + '/build',
-        // path: path.resolve(__dirname, '../build'),
-        filename: 'bundle.[contentHash].js'
-    },
 
     devServer: {
         port: 5000
@@ -47,9 +42,6 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true,
                 useShortDoctype: true
             }
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'styles/[name].[contentHash].css'
         })
     ]
 }
