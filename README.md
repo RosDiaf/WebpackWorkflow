@@ -84,3 +84,15 @@ https://github.com/isaacs/rimraf
 `
 npm i rimraf
 `
+
+# NOTES
+## Use Cache Busting and Plugins
+[contentHash] will cash file only if new changes have been added
+
+`
+filename: 'bundle.[contentHash].js'
+`
+# RESOURCES
+
+## JS Framework
+https://scraggo.github.io/javascript/2017/09/01/intro-to-js-frameworks01.html

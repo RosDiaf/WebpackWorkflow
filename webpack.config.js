@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: __dirname + '/build',
         // path: path.resolve(__dirname, '../build'),
-        filename: 'bundle.js'
+        filename: 'bundle.[contentHash].js'
     },
 
     devServer: {
@@ -49,7 +49,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-            filename: 'styles/[name].css'
+            filename: 'styles/[name].[contentHash].css'
         })
     ]
 }
