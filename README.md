@@ -5,7 +5,6 @@
 npm i webpack
 `
 
-
 ## Without webpack.config
 `
 npx webpack src/app.js -o build/output.js
@@ -47,6 +46,14 @@ npm i mini-css-extract-plugin
 ## The following plugin will remove old files from bundle
 `
 npm i clean-webpack-plugin
+`
+
+## The following plugin will present the build process information in a logical and coherent manner
+`
+* npm i webpack-dashboard
+* const webpackDashboard = require('webpack-dashboard/plugin');
+* webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open
+
 `
 
 ## Install server:
@@ -92,6 +99,12 @@ https://github.com/isaacs/rimraf
 
 `
 npm i rimraf
+`
+
+# Libraries
+Create a different bundle called vendor.js to add common libraries that do not need changes.
+`
+npm i bootstrap jquery popper.js
 `
 
 # NOTES

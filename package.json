@@ -4,7 +4,7 @@
   "description": "webpack course",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --config webpack.dev.js --open",
+    "start:dev": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open",
     "build:prod": "rimraf build && npx webpack --config webpack.prod.js",
     "build:dev": "rimraf build && npx webpack --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,6 +25,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.37.0",
+    "webpack-dashboard": "^3.0.7",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
   },

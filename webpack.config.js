@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackplugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackDashboard = require('webpack-dashboard/plugin');
 
 module.exports = {
     entry: {
@@ -45,6 +46,7 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true,
                 useShortDoctype: true
             }
-        })
+        }),
+        new WebpackDashboard(),
     ]
 }
