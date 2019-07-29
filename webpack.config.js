@@ -3,7 +3,10 @@ const HtmlWebpackplugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: './src/app.js',
+    entry: {
+        main: './src/app.js',
+        vendor: './src/vendor.js'
+    },
 
     devServer: {
         port: 5000
