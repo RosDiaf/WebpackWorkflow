@@ -30,6 +30,10 @@ npx webpack --config webpack/webpack.config.js -d
 
 # PLUGINS
 
+## Webpack Merge will merge multiple webpack confing files (common, development, production)
+`
+npm i webpack-merge
+`
 ## The following plugin will copy index.html into the build folder to run the app
 `
 npm i html-webpack-plugin
@@ -38,6 +42,11 @@ npm i html-webpack-plugin
 ## The following plugin will bundle css separated
 `
 npm i mini-css-extract-plugin
+`
+
+## The following plugin will remove old files from bundle
+`
+npm i clean-webpack-plugin
 `
 
 ## Install server:
