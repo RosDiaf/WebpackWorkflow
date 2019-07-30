@@ -49,12 +49,10 @@ npm i clean-webpack-plugin
 `
 
 ### The following plugin will present the build process information in a logical and coherent manner
-`
 * npm i webpack-dashboard
 * const webpackDashboard = require('webpack-dashboard/plugin');
 * webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open
 
-`
 
 ## Install server:
 https://github.com/webpack/webpack-dev-server
@@ -101,6 +99,15 @@ https://github.com/isaacs/rimraf
 npm i rimraf
 `
 
+# BABEL
+Install the following to have es6 features running with no errors on older version of IE
+* babel-core
+* babel-loader (This package allows transpiling JavaScript files using Babel and webpack.)
+* babel-preset-env (takes any target environments you've specified and checks them against its mappings to compile a list of plugins and passes it to Babel.)
+* babel-runtime (dependecy along with the babel-plugin-transform-runtime)
+* babel-plugin-transform-runtime (to avoid duplication across your compiled output)
+
+
 # Libraries
 Create a different bundle called vendor.js to add common libraries that do not need changes.
 `
@@ -118,3 +125,4 @@ filename: 'bundle.[contentHash].js'
 
 ## JS Framework
 https://scraggo.github.io/javascript/2017/09/01/intro-to-js-frameworks01.html
+https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/

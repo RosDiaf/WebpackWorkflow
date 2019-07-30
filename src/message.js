@@ -1,3 +1,3 @@
-export function showAlert() {
+export const showAlert = () => {
     alert("Hello World")
 }
