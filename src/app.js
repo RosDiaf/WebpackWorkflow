@@ -1,4 +1,5 @@
 require("babel-runtime/regenerator");
+require("webpack-hot-middleware/client?reload=true");
 import { showAlert } from './message.js';
 import './styles/styles.scss';
 import './img/dog.jpg';

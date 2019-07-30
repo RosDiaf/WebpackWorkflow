@@ -7,6 +7,7 @@
     "start:dev": "webpack-dev-server --config webpack.dev.js --open",
     "build:prod": "rimraf build && npx webpack --config webpack.prod.js",
     "build:dev": "rimraf build && npx webpack --config webpack.dev.js",
+    "server": "node src/server/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rosario Diaferia",
@@ -20,6 +21,7 @@
     "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.1.0",
+    "express": "^4.17.1",
     "file-loader": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
     "jquery": "^3.4.1",
@@ -30,7 +32,9 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.37.0",
+    "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.1"
   },
   "devDependencies": {

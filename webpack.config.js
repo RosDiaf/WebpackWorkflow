@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackplugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require("webpack");
 
 module.exports = {
     entry: {
@@ -9,7 +10,13 @@ module.exports = {
     },
 
     devServer: {
-        port: 5000
+        // port: 5000
+        contentBase: "build",
+        overlay: true,
+        hot: true,
+        stats: {
+            colors: true
+        }
     },
 
     module: {
@@ -55,5 +62,6 @@ module.exports = {
                 useShortDoctype: true
             }
         }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

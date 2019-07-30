@@ -54,9 +54,8 @@ npm i clean-webpack-plugin
 * webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open
 
 
-## Install server:
+## Install dev server:
 https://github.com/webpack/webpack-dev-server
-
 `
 * npm i webpack-dev-server
 * "start:dev": "webpack-dev-server"
