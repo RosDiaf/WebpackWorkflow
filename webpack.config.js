@@ -46,11 +46,18 @@ module.exports = {
                   }
                 ],
                 exclude: /node_modules/
-              }
+            },
+            {
+                test: /\.html$/,
+                use: [ {
+                  loader: 'html-loader',
+                }]
+            }
         ]
     },
 
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackplugin({
             template: './src/index.html',
             minify: {
@@ -61,7 +68,6 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true,
                 useShortDoctype: true
             }
-        }),
-        new webpack.HotModuleReplacementPlugin()
+        })
     ]
 }
