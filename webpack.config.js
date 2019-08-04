@@ -6,7 +6,15 @@ const webpack = require("webpack");
 
 module.exports = {
     entry: {
-        main: './src/app.js',
+        main: [
+            /* 
+                - Needed alog with loader-html for server reloading 
+                - CSS not reloading because MiniCssExtractPlugin.loader is in use instead of style-loader    
+            */
+            'babel-runtime/regenerator',
+            'webpack-hot-middleware/client?reload=true',
+            './src/app.js'
+        ],
         vendor: './src/vendor.js'
     },
 
@@ -70,6 +78,9 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true,
                 useShortDoctype: true
             }
+        }),
+        new webpack.DefinePlugin({
+            'process.ENV': JSON.stringify("production")
         })
     ]
 }
