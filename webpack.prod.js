@@ -8,11 +8,11 @@ module.exports = merge(common, {
     mode: 'production',
     output: {
         path: __dirname + '/build',
-        filename: '[name].[contentHash].bundle.js'
+        filename: '[name].[hash].bundle.js'
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles/[name].[contentHash].css'
+            filename: 'styles/[name].[hash].css'
         }),
         new CleanWebpackPlugin()
     ]

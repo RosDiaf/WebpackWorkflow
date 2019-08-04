@@ -18,7 +18,6 @@ server.use(webpackHotMiddleware);
 const staticMiddleware = express.static("build");
 
 server.use(staticMiddleware);
-
 server.listen(8000, () => {
     console.log("Server is listening");
 })

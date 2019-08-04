@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackplugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require("webpack");
 
 module.exports = {
@@ -23,7 +24,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(sa|sc|c)ss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(jpg|png|gif|jpeg)$/,
@@ -57,6 +58,7 @@ module.exports = {
     },
 
     plugins: [
+        new OptimizeCssAssetsWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackplugin({
             template: './src/index.html',

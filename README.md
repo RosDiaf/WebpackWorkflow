@@ -53,6 +53,11 @@ npm i clean-webpack-plugin
 * const webpackDashboard = require('webpack-dashboard/plugin');
 * webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open
 
+### The following plugin is a webpack plugin to optimize \ minimize CSS assets.
+* https://github.com/NMFR/optimize-css-assets-webpack-plugin
+* npm i optimize-css-assets-webpack-plugin
+* const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+* new OptimizeCssAssetsWebpackPlugin()
 
 ## Install dev server:
 https://github.com/webpack/webpack-dev-server
