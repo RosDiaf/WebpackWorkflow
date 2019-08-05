@@ -103,9 +103,9 @@ https://github.com/isaacs/rimraf
 npm i rimraf
 `
 ## GZIP/Brotli
-######The following plugins compress the code
--![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`express-static-gzip`
--![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`brotli-webpack-plugin`
+###### The following plugins compress the code
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`express-static-gzip`
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`brotli-webpack-plugin`
 `
 const expressStaticGzip = require('express-static-gzip');
 server.use(expressStaticGzip("build", {
@@ -114,8 +114,8 @@ server.use(expressStaticGzip("build", {
 `
 ## Bunble Analyzer
 ###### The following plugin will visualize size of webpack output files with an interactive zoomable treemap.
--![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`webpack-bundle-analyzer`
--![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`stats.json will be added to build folder`
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`webpack-bundle-analyzer`
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`stats.json will be added to build folder`
 `
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 new BundleAnalyzerPlugin({
@@ -139,7 +139,7 @@ optimization: {
 `
 
 # BABEL
-Install the following to have es6 features running with no errors on older version of IE
+###### Install the following to have es6 features running with no errors on older version of IE
 * babel-core
 * babel-loader (This package allows transpiling JavaScript files using Babel and webpack.)
 * babel-preset-env (takes any target environments you've specified and checks them against its mappings to compile a list of plugins and passes it to Babel.)
@@ -148,14 +148,14 @@ Install the following to have es6 features running with no errors on older versi
 
 
 # Libraries
-Create a different bundle called vendor.js to add common libraries that do not need changes.
+###### Create a different bundle called vendor.js to add common libraries that do not need changes.
 `
 npm i bootstrap jquery popper.js
 `
 
 # NOTES
 ## Use Cache Busting and Plugins
-[contentHash] will cash file only if new changes have been added
+###### [contentHash] will cash file only if new changes have been added
 
 `
 filename: 'bundle.[contentHash].js'
