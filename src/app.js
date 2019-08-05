@@ -15,3 +15,14 @@ var myFunc = async args => {
 myFunc({a:1, b:1});
 
 console.log(`Environment is ${process.env.NODE_ENV}`);
+
+const globalVar = true;
+const something = function(someArgument) {
+    const logVariableName = someArgument;
+    const result = function(logVariableName) {
+        return longVariableName * logVariableName + globalVar
+    }
+    console.log(result);
+}
+
+something();
