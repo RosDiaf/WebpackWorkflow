@@ -128,5 +128,5 @@ filename: 'bundle.[contentHash].js'
 # RESOURCES
 
 ## JS Framework
-https://scraggo.github.io/javascript/2017/09/01/intro-to-js-frameworks01.html
-https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/
+- ![#1589F0](https://scraggo.github.io/javascript/2017/09/01/intro-to-js-frameworks01.html)`#1589F0`
+- ![#1589F0](https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/)`#1589F0`
