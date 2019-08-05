@@ -103,6 +103,16 @@ https://github.com/isaacs/rimraf
 npm i rimraf
 `
 
+## GZIP/Brotli
+The following plugins compress the code
+-![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`express-static-gzip`
+-![#1589F0](https://placehold.it/15/1589F0/000000?text=+)`brotli-webpack-plugin`
+`
+const expressStaticGzip = require('express-static-gzip');
+server.use(expressStaticGzip("build", {
+    enableBrotli: true
+}));
+`
 # BABEL
 Install the following to have es6 features running with no errors on older version of IE
 * babel-core

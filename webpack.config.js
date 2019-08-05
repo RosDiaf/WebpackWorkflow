@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackplugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const BrotliWebpackPlugin = require("brotli-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = {
@@ -81,6 +82,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.ENV': JSON.stringify("production")
-        })
+        }),
+        new BrotliWebpackPlugin()
     ]
 }
