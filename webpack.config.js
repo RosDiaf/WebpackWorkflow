@@ -3,6 +3,7 @@ const HtmlWebpackplugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const BrotliWebpackPlugin = require("brotli-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const webpack = require("webpack");
 
 module.exports = {
@@ -28,7 +29,18 @@ module.exports = {
             colors: true
         }
     },
-
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+            cacheGroups: {
+                vendor: {
+                    name: "vendor",
+                    chunks: "initial",
+                    minChunks: 2
+                }
+            }
+        }
+    },
     module: {
         rules: [
             {
@@ -83,6 +95,9 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.ENV': JSON.stringify("production")
         }),
-        new BrotliWebpackPlugin()
+        new BrotliWebpackPlugin(),
+        new BundleAnalyzerPlugin({
+            generateStatsFile: true
+        })
     ]
 }
